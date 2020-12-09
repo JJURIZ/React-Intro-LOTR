@@ -21,8 +21,10 @@ let movieData = [
   }
 ]
 
+
 const movies = movieData.map((components, idx) => {
-  return <Movie title={components.title} hours={components.hours} minutes={components.hours} key={idx} />
+  // return <Movie title={components.title} hours={components.hours} minutes={components.hours} key={idx} /> //STANDARD RETURN 
+  return <Movie {...components} key={`movie-${idx}`} /> //AS SPREAD OPERATOR
 });
 
 
